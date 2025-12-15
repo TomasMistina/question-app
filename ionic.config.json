@@ -1,0 +1,7 @@
+{
+  "name": "ionic-question-app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue-vite"
+}
