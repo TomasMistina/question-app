@@ -81,11 +81,14 @@ async function copyText() {
   justify-content: center;
   z-index: 1000;
   padding: 16px;
+  background: rgba(0, 0, 0, 0.45);
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
 }
 
 .modal {
-  background: var(--ion-background-color);
-  color: var(--ion-text-color);
+  background: var(--ion-background-color, #ffffff);
+  color: var(--ion-text-color, #000000);
   border-radius: 16px;
   padding: 24px;
   max-width: 500px;
@@ -112,10 +115,17 @@ async function copyText() {
 }
 
 .question-text {
-  color: var(--ion-text-color);
+  color: inherit;
   font-size: 18px;
   margin-bottom: 20px;
   line-height: 1.5;
+}
+
+@media (prefers-color-scheme: dark) {
+  .modal {
+    background: var(--ion-background-color, #111111);
+    color: var(--ion-text-color, #ffffff);
+  }
 }
 
 .modal-actions {
